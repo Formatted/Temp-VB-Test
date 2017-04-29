@@ -1,0 +1,11 @@
+Sub DsplUsernameOfDefaultStore()
+
+  Dim NS As Outlook.NameSpace
+  Dim DefaultInboxFldr As MAPIFolder
+
+  Set NS = CreateObject("Outlook.Application").GetNamespace("MAPI")
+  Set DefaultInboxFldr = NS.GetDefaultFolder(olFolderInbox)
+
+  Debug.Print DefaultInboxFldr.Parent.Name
+
+End Sub
